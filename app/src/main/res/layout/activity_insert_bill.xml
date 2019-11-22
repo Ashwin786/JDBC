@@ -10,27 +10,23 @@
         android:id="@+id/btn_login"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="30dp"
         android:text="insert Bill"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/rg_btn_partial"
+        app:layout_constraintStart_toStartOf="@+id/rg_btn_partial"
+        app:layout_constraintTop_toBottomOf="@+id/ll_partial" />
 
     <RadioGroup
         android:id="@+id/rg_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-
+        android:layout_marginTop="30dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
         <RadioButton
             android:id="@+id/rb_urban"
             android:layout_width="wrap_content"
@@ -39,16 +35,199 @@
             android:text="Urban"
             tools:layout_editor_absoluteX="150dp"
             tools:layout_editor_absoluteY="153dp" />
+
         <RadioButton
             android:id="@+id/rb_rural"
             android:layout_width="wrap_content"
-            android:layout_marginLeft="20dp"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:padding="10dp"
             android:text="Rural"
             tools:layout_editor_absoluteX="150dp"
             tools:layout_editor_absoluteY="153dp" />
     </RadioGroup>
 
+    <RadioGroup
+        android:id="@+id/rg_btn_port"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/rg_btn"
+        app:layout_constraintStart_toStartOf="@+id/rg_btn"
+        app:layout_constraintTop_toBottomOf="@+id/rg_btn">
+
+        <RadioButton
+            android:id="@+id/rb_wo_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Without Portable"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="153dp" />
+
+        <RadioButton
+            android:id="@+id/rb_port"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:text="With Portable"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/rg_btn_port"
+        app:layout_constraintStart_toStartOf="@+id/rg_btn_port"
+        app:layout_constraintTop_toBottomOf="@+id/rg_btn_port">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Portable % " />
+
+        <EditText
+            android:id="@+id/ed_portable_percentage"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="3" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_btn_partial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/rg_btn_port"
+        app:layout_constraintHorizontal_bias="0.705"
+        app:layout_constraintStart_toStartOf="@+id/rg_btn_port"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
+
+        <RadioButton
+            android:id="@+id/rb_wo_partial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Without Partial"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="153dp" />
+
+        <RadioButton
+            android:id="@+id/rb_partial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:padding="10dp"
+            android:text="With Partial"
+            tools:layout_editor_absoluteX="150dp"
+            tools:layout_editor_absoluteY="153dp" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/ll_partial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/rg_btn_partial"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rg_btn_partial"
+        app:layout_constraintTop_toBottomOf="@+id/rg_btn_partial">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Store Partial % " />
+
+            <EditText
+                android:id="@+id/ed_store_partial"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:maxLength="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Beneficiary Partial % " />
+
+            <EditText
+                android:id="@+id/ed_benef_partial"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:ems="100"
+                android:inputType="number"
+                android:maxLength="3" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/ti_fromDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:gravity="center"
+            android:text="From Date" />
+
+
+        <TextView
+            android:id="@+id/ti_toDate"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:drawableRight="@android:drawable/ic_menu_my_calendar"
+            android:gravity="center"
+            android:text="To Date" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

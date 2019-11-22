@@ -36,7 +36,7 @@ public class Jdbc {
     private static Context mcontext;
     private ProgressDialog pd;
     private String customDate = "2019-08-01 00:00:00";
-    //    private String customDate = "2019-07-01";
+    //    private String fromDate = "2019-07-01";
     private Date custom_Date;
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     Calendar c = Calendar.getInstance();
